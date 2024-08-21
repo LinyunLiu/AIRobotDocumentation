@@ -4,14 +4,20 @@ body{
 main{
     color: #222222;
     margin: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Avenir, sans-serif;
 }
-/* Width and height of the scrollbar */
-body::-webkit-scrollbar {
-    width: 12px;   /* Width of vertical scrollbar */
-    height: 12px;  /* Height of horizontal scrollbar */
+::selection{
+    background-color: #ff8c00cc;
 }
-/* TOP NAVIGATON */
+@font-face {
+    font-family: 'nasalization';
+    src: url('fonts/nasalization.otf')
+}
+@font-face {
+    font-family: 'prototype';
+    src: url('fonts/prototype.ttf')
+}
+/* TOP NAVIGATION */
 img.icon{
     width: 30px;
     position: absolute;
@@ -29,7 +35,7 @@ div.nav a{
 div.nav a:hover{
     text-decoration: underline;
 }
-/* MAIN CONTRNTS */
+/* MAIN CONTENTS */
 div.content{
     margin-top: 15vh;
     display: flex;
@@ -41,18 +47,29 @@ p.title{
     font-size: 36px;
     font-weight: bold;
     margin: 0 20px 0 0;
+    font-family: nasalization, serif;
 }
 div.overview{
     width: 85vw;
     max-width: 750px;
     margin: 20px 0 0 0;
 }
-img.cover{
+div.overview p{
+    font-size: 18px;
+}
+div.cover-images{
     width: 85vw;
     max-width: 750px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: scroll;
 }
-
+img.cover{
+    margin: 5px;
+    width: 300px;
+    object-fit: cover;
+}
 div.footer{
     display: flex;
     flex-direction: row;
@@ -67,17 +84,36 @@ div.footer a{
 div.footer a:hover{
     text-decoration: underline;
 }
-
-button{
-    margin: 50px 0 10px 0;
+div.buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 50px 0
+}
+button.download{
+    margin: 10px;
     cursor: pointer;
-    width: 200px;
+    width: 20vw;
+    max-width: 200px;
+    height: 35px;
+    border: 1px solid transparent;
+    background-color: darkorange;
+    color: #222222;
+    position: relative;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button.github{
+    margin: 10px;
+    cursor: pointer;
+    width: 20vw;
+    max-width: 200px;
     height: 35px;
     border: 1px solid transparent;
     background-color: #222222;
     color: antiquewhite;
     position: relative;
     border-radius: 5px;
+    font-size: 16px;
 }
 p.button-description{
     margin: 0 0 10px 0;

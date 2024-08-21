@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Linyun Liu"/>
+    <meta name="theme-color" content="antiquewhite">
+    <link rel="shortcut icon" href="../robot.png"/>
+    <title>Documentation</title>
+    <style>
+        pre{
+            border-radius: 8px;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        main{
+            color: #222222;
+            margin: 20px;
+            font-family: Avenir, sans-serif;
+        }
+        ::selection{
+            background-color: #ff8c00cc;
+        }
+        @font-face {
+            font-family: 'nasalization';
+            src: url('../fonts/nasalization.otf')
+        }
+        @font-face {
+            font-family: 'prototype';
+            src: url('../fonts/prototype.ttf')
+        }
+        /* TOP NAVIGATION */
+        img.icon{
+            width: 30px;
+            position: absolute;
+            transform: translate(-4px, -5px);
+        }
+        div.nav{
+            margin-left: 40px;
+        }
+        div.nav a{
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+            color: black;
+        }
+        div.nav a:hover{
+            text-decoration: underline;
+        }
+
+        /* FOOTER  */
+        div.footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        div.footer a{
+            text-decoration: none;   
+            color: gray;
+            margin: 0 0 0 10px;;
+        }
+        div.footer a:hover{
+            text-decoration: underline;
+        }
+
+        /* MAIN CONTENTS */
+        div.content{
+            margin-top: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p.title{
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 20px 0 0;
+            font-family: nasalization, serif;
+        }
+        div.content div{
+            margin-top: 25px;
+            width: 85vw;
+            max-width: 800px;
+        }
+        p.section-title{
+            font-weight: bold;
+            font-family: nasalization, serif;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            background-color: darkorange;
+            padding: 5px;
+        }
+        p.section-subtitle{
+            margin: 0;
+            font-weight: bold;
+        }
+        p.detail{
+            margin: 0 0 10px 0;
+        }
+        a{
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img class="icon" src="../robot.png" alt="">
+        <div class="nav">
+            <a href="../index.html">Overview</a>
+            <a href="../components/components.html">Components</a>
+            <a href="../circuits/circuits.html">Circuits</a>
+            <a href="../development/development.html" class="active" style="color: darkorange">development</a>
+            <a href="../demos/demos.html">Demos</a>
+            <a href="../developers/developers.html">Developers</a>
+        </div>
+        <div class="content">
+            <p class="title">Softwares</p>
+            <br><br><br>
+            <div>
+                <p class="section-title">ROS2</p>
+                <p class="detail"><a href="https://www.ros.org/" target="_blank">Robot Operating System (ROS)</a> is a set of software libraries and tools that help you build robot
+                    applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has
+                    what you need for your next robotics project. And it's all open source.
+                    In this project, we use ROS2 Humble. <a href="https://docs.ros.org/en/foxy/index.html" target="_blank">ros2 documentation</a></p>
+                <p class="section-subtitle">Nav2</p>
+                <p class="detail"><a href="https://nav2.org/" target="_blank">Nav2</a> is the go-to industry-standard mobile robot navigation system, deploying Autonomous Vehicle
+                    technologies brought down, reworked, and optimized for mobile and surface robotics. As the successor
+                    to the ROS Navigation Stack, Nav2 builds on 15 years of heritage and is accelerating the robotics
+                    industry. <a href="https://docs.nav2.org/getting_started/index.html" target="_blank">nav2 documentation</a></p>
+                <p class="section-subtitle">Slam Toolbox</p>
+                <p class="detail">The <a href="https://wiki.ros.org/slam_toolbox" target="_blank">Slam Toolbox</a> package incorporates information from laser scanners in the form of a
+                    LaserScan message and TF transforms from odom->base link, and creates a map 2D map of a space. This
+                    package will allow you to fully serialize the data and pose-graph of the SLAM map to be reloaded to
+                    continue mapping, localize, merge, or otherwise manipulate. We allow for SLAM Toolbox to be run in synchronous
+                    (process all valid sensor measurements, regardless of lag) and asynchronous (process valid sensors measurements
+                    on an as-possible basis) modes.</p>
+                <p class="section-subtitle">RPLidar ROS</p>
+                <p class="detail">The <a href="https://index.ros.org/p/rplidar_ros/" target="_blank">rplidar_ros_package</a> that support rplidar A1/A2/A3/S1/S2/S3/T1
+                    <a href="https://github.com/Slamtec/sllidar_ros2" target="_blank">rplidar_ros2_github</a>. It is used in ROS2
+                    for SLAM with an additional support for odometry <a href="https://github.com/MAPIRlab/rf2o_laser_odometry" target="_blank">rf2o_laser_odometry_github</a></p>
+            </div>
+            <div>
+                <p class="section-title">Ultralytics (Yolov8) - Optional</p>
+                <p class="detail"><a href="https://index.ros.org/p/rplidar_ros/" target="_blank">Ultralytics YOLOv8</a>, the latest version of the acclaimed real-time object
+                    detection and image segmentation model. YOLOv8 is built on cutting-edge advancements in deep learning
+                    and computer vision, offering unparalleled performance in terms of speed and accuracy. Its streamlined design
+                    makes it suitable for various applications and easily adaptable to different hardware platforms, from edge devices
+                    to cloud APIs.</p>
+                <p class="section-subtitle">Object Detection</p>
+                <p class="detail">Object detection is a task that involves identifying the location and class of objects in an image or video stream. The documentation is
+                available on the <a href="https://docs.ultralytics.com/tasks/detect/" target="_blank">official website</a></p>
+            </div>
+
+
+            <br><br><br><br><br><br>
+
+
+            <p class="title">Programs</p>
+            <div>
+                <p class="section-title">Raspberry Pi</p>
+                <p class="detail">In this project we are using Raspberry Pi 4 with 8GB RAM. Use <a href="https://www.raspberrypi.com/software/" target="_blank">Raspberry Pi Imager</a> to
+                    flash suitable OS on the micro sd card. In this case, we are using Ubuntu 20.04.</p>
+                <p class="section-subtitle">GPIO Zero</p>
+                <p class="detail">Interface to GPIO devices with Raspberry Pi. <a href="https://gpiozero.readthedocs.io/en/stable/" target="_blank"> Read documentation</a>
+                    It needs to be installed in order to make the pins to function. <a href="https://gpiozero.readthedocs.io/en/stable/installing.html" target="_blank">Installation Guide</a>
+                    To get started with the pins, check out this demo development kit: <a href="https://docs.sunfounder.com/projects/davinci-kit/en/latest/for_other_models.html" target="_blank">SunFounder DaVinci Kit for Raspberry Pi</a><br>
+                    If you are using Raspberry Pi OS, follow this tutorial to set up GPIO with wiringPi based on your preferred programming language:
+                    <a href="https://docs.sunfounder.com/projects/davinci-kit/en/latest/preparation/libraries.html" target="_blank">Tutorial</a>
+                </p>
+                <p class="section-subtitle">Camera</p>
+                <p class="detail">In order for the camera to work properly after it is connected to the Raspberry Pi,
+                    we need to install necessary packages and configure the configuration file. Camera is purchased from <a href="https://www.freenove.com/" target="_blank">Freenove</a>.<br>
+                    - If you are using Ubuntu 20.04, you can download installation guide <a href="setup_camera.md" download="setup_camera.md" target="_blank">here</a>
+                    , or you can find it on GitHub<br>
+                    - If you are using Raspberry Pi OS, the specific tutorial can be downloaded <a href="https://github.com/Freenove/Freenove_Camera_Module_for_Raspberry_Pi/archive/master.zip" target="_blank">here</a>
+                </p>
+
+                <p class="section-title">YOLOv8</p>
+                <p class="section-subtitle" style="margin-bottom: -20px">Object Detection Code Sample</p>
+                <pre class="line-numbers"><code class="language-python"># Linyun Liu (2024)
+import cv2
+from picamera2 import Picamera2
+from ultralytics import YOLO
+import sys
+import os
+import time
+
+# Initialize the Picamera2
+picam2 = Picamera2()
+picam2.preview_configuration.main.size = (1280, 720)
+picam2.preview_configuration.main.format = "RGB888"
+picam2.preview_configuration.align()
+picam2.configure("preview")
+picam2.start()
+
+# Load the YOLOv8 model
+model_custom = YOLO("/home/airobot/Rover/camera/detection/v3.pt")
+model_default = YOLO("/home/airobot/Rover/camera/detection/yolov8n.pt")
+
+
+def extract(results, frame):
+    boxes = results.boxes.xywh.cpu()
+    classes = results.boxes.cls.cpu().tolist() # return detected objects ID -> List of int
+    names = results.names # return all possible names for dtection -> Dictionary (int: name)
+    confs = results.boxes.conf.float().cpu().tolist() # return detected objects confidence score -> List of Float
+    output = []
+    for i in range(len(classes)):
+        result = []
+        result.append(names[classes[i]])
+        result.append(confs[i])
+
+        x1, y1, x2, y2 = (results[i].boxes.xyxy)[0]
+        x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        center_x = (x1+x2)//2
+        center_y = (y1+y2)//2
+        result.append([center_x, center_y])
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
+        cv2.circle(frame, (center_x, center_y), 5, (0, 0, 255), -1)
+
+        x, y, w, h = (results[i].boxes.xywh)[0]
+        result.append(int(w)*int(h))
+
+        output.append(result)
+
+    return output # 2D array, i.e. [[person, 0.92, coordinates, area], [cat, 0.67, coordinates, area]], [detcted object, confidence score, object bounding box coordinates, box area]
+
+def detect(controller):
+    try:
+        while True:
+            frame = picam2.capture_array()
+
+            results_c = model_custom(frame)
+            results_d = model_default(frame)
+            os.system("clear")
+            annotated_frame = results_d[0].plot()
+            try:
+                result_c = extract(results_c[0])
+                result_d = extract(results_d[0], annotated_frame)
+                for r in result_c:
+                     print(f"{r[0]}: {r[1]}")
+                for r in result_d:
+                     print(f"{r[0]}: {r[1]}")
+            except:
+                pass
+             cv2.imshow("Camera", annotated_frame)
+            if cv2.waitKey(1) == ord("q"):
+                cv2.destroyAllWindows()
+                break
+    except KeyboardInterrupt:
+        os.system("clear")
+        cv2.destroyAllWindows()</code></pre>
+                <p class="section-subtitle">Model Training</p>
+                <p class="detail">To learn how to train a model, please go to ultralytics websites,
+                    there are plenty instructions, tutorials, and videos as reference.
+                    <a href="https://docs.ultralytics.com/modes/train/">Read Documentation</a></p>
+
+                <p class="section-title">Motor Controllers</p>
+
+
+            </div>
+            <br><br><br>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="footer">
+            <a>@2024 | </a>
+            <a href="">GitHub</a>
+            <a href="">Trinity</a>
+            <a href="">Resources</a>
+        </div>
+    </main>
+    <link href="prism.css" rel="stylesheet" />
+    <script src="prism.js"></script>
+</body>
+</html>

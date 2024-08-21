@@ -19,9 +19,20 @@
         main{
             color: #222222;
             margin: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Avenir, sans-serif;
         }
-        /* TOP NAVIGATON */
+        ::selection{
+            background-color: #ff8c00cc;
+        }
+        @font-face {
+            font-family: 'nasalization';
+            src: url('../fonts/nasalization.otf')
+        }
+        @font-face {
+            font-family: 'prototype';
+            src: url('../fonts/prototype.ttf')
+        }
+        /* TOP NAVIGATION */
         img.icon{
             width: 30px;
             position: absolute;
@@ -56,7 +67,7 @@
             text-decoration: underline;
         }
 
-        /* MAIN CONTRNTS */
+        /* MAIN CONTENTS */
         div.content{
             margin-top: 15vh;
             display: flex;
@@ -68,6 +79,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 0 20px 0 0;
+            font-family: nasalization, serif;
         }
         div.developers{
             margin-top: 50px;
@@ -85,10 +97,12 @@
             width: 210px;
             height: 280px;
             object-fit: cover;
-            filter: grayscale(100%);
+            /*filter: grayscale(100%);*/
             border-radius: 4px;
         }
         p.name{
+            width: 210px;
+            overflow-wrap: break-word;
             margin: 0 0 5px 0;
             background-color: rgb(0,0,0,0.3);
             padding: 5px;
@@ -96,10 +110,15 @@
             font-weight: bold;
         }
         p.description{
+            width: 210px;
+            overflow-wrap: break-word;
             margin: 5px 0 5px 0
         }
-        p.email{
-            margin: 5px 0 5px 0
+        a.email{
+            width: 210px;
+            overflow-wrap: break-word;
+            margin: 5px 0 5px 0;
+            color: darkorange
         }
     </style>
 </head>
@@ -110,7 +129,7 @@
             <a href="../index.html">Overview</a>
             <a href="../components/components.html">Components</a>
             <a href="../circuits/circuits.html">Circuits</a>
-            <a href="../softwares/softwares.html">Softwares</a>
+            <a href="../development/development.html">development</a>
             <a href="../demos/demos.html">Demos</a>
             <a href="../developers/developers.html" class="active" style="color: darkorange">Developers</a>
         </div>
@@ -120,37 +139,38 @@
                 <div>
                     <img class="profile" src="https://www.twu.ca/sites/default/files/styles/square_700w_/public/sites/default/files/park_andrew_v.2_2021.jpg?h=f405c703&itok=IUuYYN7u" alt="">
                     <p class="name">Dr. Andrew Park</p>
-                    <p class="description">Sponsor and supervisor</p>
-                    <p class="email">Email: A.Park@twu.ca</p>
+                    <p class="description">Sponsor and Supervisor</p>
+                    <a class="email" href="mailto:A.Park@twu.ca">A.Park@twu.ca</a>
                 </div>
                 <div>
-                    <img class="profile" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="">
+                    <img class="profile" src="linyun.jpg" alt="">
                     <p class="name">Linyun Liu</p>
-                    <p class="description">Sponsor and supervisor</p>
-                    <p class="email">Email: A.Park@twu.ca</p>
+                    <p class="description">Developer</p>
+                    <a class="email" href="mailto:linyun.liu@mytwu.ca">linyun.liu@mytwu.ca</a>
                 </div>
                 <div>
                     <img class="profile" src="https://wallpapers.com/images/hd/cool-profile-picture-minion-13pu7815v42uvrsg.jpg" alt="">
                     <p class="name">Jun Park</p>
-                    <p class="description">Sponsor and supervisor</p>
-                    <p class="email">Email: A.Park@twu.ca</p>
+                    <p class="description">Developer</p>
+                    <a class="email" href="mailto:jun.park@mytwu.ca">jun.park@mytwu.ca</a>
                 </div>
                 <div>
                     <img class="profile" src="https://pics.craiyon.com/2023-11-26/oMNPpACzTtO5OVERUZwh3Q.webp" alt="">
                     <p class="name">Jacobus Burger</p>
-                    <p class="description">Sponsor and supervisor</p>
-                    <p class="email">Email: A.Park@twu.ca</p>
+                    <p class="description">Developer</p>
+                    <a class="email" href="mailto:jacobus.burger@mytwu.ca">jacobus.burger@mytwu.ca</a>
                 </div>
                 <div>
-                    <img class="profile" src="https://s3-alpha.figma.com/hub/file/5059055856/ff93c76b-111f-4568-a67c-cfbd7036f020-cover.png" alt="">
+                    <img class="profile" src="josh.jpg" alt="">
                     <p class="name">Josh Boelema</p>
-                    <p class="description">Sponsor and supervisor</p>
-                    <p class="email">Email: A.Park@twu.ca</p>
+                    <p class="description">Developer</p>
+                    <a class="email" href="mailto:josh.boelema@mytwu.ca">josh.boelema@mytwu.ca</a>
                 </div>
             </div>
         </div>
         <br><br><br><br><br><br><br><br>
         <div class="footer">
+            <a>@2024 | </a>
             <a href="">GitHub</a>
             <a href="">Trinity</a>
             <a href="">Resources</a>
