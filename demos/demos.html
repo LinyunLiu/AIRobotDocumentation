@@ -32,7 +32,7 @@
             font-family: 'prototype';
             src: url('fonts/prototype.ttf')
         }
-        /* TOP NAVIGATON */
+        /* TOP NAVIGATION */
         img.icon{
             width: 30px;
             position: absolute;
@@ -67,7 +67,7 @@
             text-decoration: underline;
         }
 
-        /* MAIN CONTRNTS */
+        /* MAIN CONTENTS */
         div.content{
             margin-top: 15vh;
             display: flex;
@@ -79,6 +79,16 @@
             font-size: 36px;
             font-weight: bold;
             margin: 0 20px 0 0;
+        }
+        div.demo{
+            display: flex;
+            flex-direction: column;
+            width: 85vw;
+            max-width: 800px;
+        }
+        iframe{
+            border: none;
+            height: 400px;
         }
     </style>
 </head>
@@ -95,6 +105,11 @@
         </div>
         <div class="content">
             <p class="title">Demos</p>
+            <div class="demo">
+                <p>Currently, the working prototype is still incomplete and have flaws, however,
+                    we have a working prototype for remote driving, here is a demo. codes can be found on GitHub</p>
+                <iframe src="https://drive.google.com/file/d/1yEOfD99aFdIU09JxokpRmYqmL7fngADn/preview"></iframe>
+            </div>
         </div>
         <br><br><br><br><br><br><br><br>
         <div class="footer">
